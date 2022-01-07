@@ -24,7 +24,7 @@ public class OrangeHRMTest extends BaseClass {
         Thread.sleep(2000);
 
         String actURL=driver.getCurrentUrl();
-        String expectURL="http://automationpractice.com/index.php?controller=my-account";
+        String expectURL="http://automationpractice.com/index.php?controller=my-account1";
         Assert.assertEquals(actURL,expectURL);
 
     }
