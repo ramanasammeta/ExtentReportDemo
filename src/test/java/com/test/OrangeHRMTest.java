@@ -12,18 +12,21 @@ public class OrangeHRMTest extends BaseClass {
     @Test
     public void loginPageTest() throws InterruptedException {
         Thread.sleep(2000);
-        WebElement imgElement=driver.findElement(By.xpath("//*[@id=\"divLogo\"]/img1"));
+        WebElement imgElement=driver.findElement(By.xpath("//img[@class='logo img-responsive']"));
         Assert.assertTrue(imgElement.isDisplayed());
     }
     @Test
     public void loginTest() throws InterruptedException {
-        driver.findElement(By.id("txtUsername")).sendKeys("admin");
-        driver.findElement(By.id("txtPassword")).sendKeys("admin123");
-        driver.findElement(By.id("btnLogin")).click();
+        driver.findElement(By.xpath("//a[@class='login']")).click();
+        driver.findElement(By.id("email")).sendKeys("ramanasreddy@gmail.com");
+        driver.findElement(By.id("passwd")).sendKeys("abcxyz@123");
+        driver.findElement(By.id("SubmitLogin")).click();
         Thread.sleep(2000);
-        String actualTitle=driver.getTitle();
-        String expectedTitle="OrangeHRM";
-        Assert.assertEquals(actualTitle, expectedTitle);
+
+        String actURL=driver.getCurrentUrl();
+        String expectURL="http://automationpractice.com/index.php?controller=my-account";
+        Assert.assertEquals(actURL,expectURL);
+
     }
     @Test
     public void sampleCase() {

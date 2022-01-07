@@ -2,7 +2,7 @@ package com.extentManager;
 
 import com.aventstack.extentreports.*;
 import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
-
+import com.basePackage.BaseClass;
 public class ExtentManager {
 
     public static ExtentHtmlReporter htmlReporter;
