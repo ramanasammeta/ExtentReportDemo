@@ -11,7 +11,7 @@ public class OrangeHRMTest extends BaseClass {
 
     @Test
     public void loginPageTest() throws InterruptedException {
-        Thread.sleep(2000);
+        Thread.sleep(5000);
         WebElement imgElement=driver.findElement(By.xpath("//img[@class='logo img-responsive']"));
         Assert.assertTrue(imgElement.isDisplayed());
     }
