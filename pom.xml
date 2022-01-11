@@ -68,12 +68,8 @@
                 <configuration>
                     <suiteXmlFiles>
                         <!--suppress UnresolvedMavenProperty -->
-                        <suiteXmlFile>${xmlFiles}</suiteXmlFile>
+                        <suiteXmlFile>testng.xml</suiteXmlFile>
                     </suiteXmlFiles>
-                    <systemPropertyVariables>
-                        <appURL>${url}</appURL>
-                    </systemPropertyVariables>
-
                 </configuration>
             </plugin>
         </plugins>
